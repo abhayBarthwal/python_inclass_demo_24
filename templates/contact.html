@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    <div>
+        <div>
+            <div>
+                <h1>Welcome to our Contact page!</h1>
+                {% if user_age < 20 %}
+                <h2>Please make sure an adult contacts us!</h2>
+                {% else %}
+                <h2>Please cal us at XXXXXXXXXXX!</h2>
+                {% endif %}
+
+                <ol>
+                    {% for fruit in the_list %}
+                    <li>{{fruit}}</li>
+                    {% endfor %}
+                </ol>
+                
+                <h2></h2>
+                <a href="/">Home Page</a><br>
+                <a href="/login/">Form</a>
+                <table>
+                    {% for sub,marks in the_dictionary.items() %}
+                    <tr>
+                        <th>{{sub}}</th>
+                        <td>{{marks}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
