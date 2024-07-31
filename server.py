@@ -19,7 +19,7 @@ def hello_world():
 
 @app.route('/contact/') 
 def contact(): 
-    my_list = ["Apples", "Mango", "Cherry", "Grapes", "Banana"]
+    my_list = ["Apples", "Mango", "Cherry", "Grapes", "Banana", "Watermelon"]
     my_dictionary = {'phy':50,'che':60,'maths':70, 'coding':90}
     return render_template("contact.html", user_age = 15, the_list = my_list, the_dictionary = my_dictionary)
 
