@@ -35,7 +35,6 @@ def login():
         user_hobby = request.form["us_hobby"]
         user_file = request.files["us_file"]
         user_file.save("static/uploads/" + user_file.filename)
-        print(user_file)
         print("user info = ", user_name, user_age, user_city, user_hobby)
         my_insert_query = "INSERT INTO user_info VALUES ('{0}', {1}, '{2}', '{3}');".format(user_name, user_age, user_city, user_hobby)
         cur.execute(my_insert_query)
